@@ -1,10 +1,4 @@
-/**
-* Template Name: Presento
-* Template URL: https://bootstrapmade.com/presento-bootstrap-corporate-template/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+ 
 
 (function() {
   "use strict";
@@ -165,4 +159,24 @@
     });
   });
 
+
+ 
+
+
+document.querySelectorAll('.js-service').forEach(service => {
+  const toggle = service.querySelector('.toggle-icon');
+  const desc = service.querySelector('.description');
+
+  toggle.addEventListener('click', () => {
+    desc.classList.toggle('open');
+    toggle.classList.toggle('open');
+  });
+});
+
+
+
+
+
 })();
+
+

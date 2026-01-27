@@ -1,10 +1,12 @@
  /* ================================
    Fonts
 ================================ */
+
+ 
+
 :root {
   --default-font: "Inter", system-ui, -apple-system, "Segoe UI",
-    "Helvetica Neue", Arial, sans-serif;
-
+  "Helvetica Neue", Arial, sans-serif;
   --heading-font: "Montserrat", sans-serif;
   --nav-font: "Poppins", sans-serif;
 }
@@ -15,8 +17,13 @@
 :root {
   --background-color: #ffffff;        /* Main background */
   --default-color: #475569;           /* Body text */
-  --heading-color: #0f172a;           /* Dark Navy headings */
-  --accent-color: #0b3c5d;            /* Navy Blue (Primary brand color) */
+   /* --heading-color: #0f172a;          */
+  /* --accent-color: #0b3c5d;           */
+
+--accent-color: #0a3a5e;    
+--heading-color: #0a3a5e;  
+
+
   --surface-color: #ffffff;           /* Cards, boxes */
   --contrast-color: #ffffff;          /* Text on dark / accent */
 }
@@ -53,7 +60,7 @@
 
 /* Dark / Maritime sections */
 .dark-background {
-  --background-color: #0f172a;         /* Deep Navy */
+  --background-color: #0f172a;    
   --default-color: #e5e7eb;
   --heading-color: #ffffff;
   --surface-color: #1e293b;
@@ -122,57 +129,7 @@ h6 {
   font-family: var(--heading-font);
 }
 
-/* PHP Email Form Messages
-------------------------------*/
-.php-email-form .error-message {
-  display: none;
-  background: #df1529;
-  color: #ffffff;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
 
-.php-email-form .sent-message {
-  display: none;
-  color: #ffffff;
-  background: #059652;
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .loading {
-  display: none;
-  background: var(--surface-color);
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-}
-
-.php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid var(--accent-color);
-  border-top-color: var(--surface-color);
-  animation: php-email-form-loading 1s linear infinite;
-}
-
-@keyframes php-email-form-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
 /* Pulsating Play Button
 ------------------------------*/
@@ -258,18 +215,32 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: var(--default-color);
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
+  /* ===================== */
+  height: 15vh;
+}
+@media (max-width: 768px) {
+.header {
+  color: var(--default-color);
+  background-color: var(--default-color);
+  padding: 20px 0;
+  transition: all 0.5s;
+  z-index: 997;
+  /* ===================== */
+  height: 10vh;
 }
 
+}
 .header .logo {
   line-height: 1;
 }
 
 .header .logo img {
-  max-height: 36px;
+  /*=============== */
+  max-height: 56px;
   margin-right: 8px;
 }
 
@@ -293,7 +264,7 @@ h6 {
   font-size: 14px;
   padding: 8px 25px;
   margin: 0 0 0 30px;
-  /* border-radius: 4px; */
+  border-radius: 0px !important;
   transition: 0.3s;
 }
 
@@ -830,13 +801,16 @@ section,
 
 .section-bg {
   background-color: transparent;
+
   padding: 160px 0;
   position: relative;
-}
+} 
 
-.section-bg:before {
+ 
+
+ .section-bg:before {
   content: "";
-  background-color: var(--background-color);
+  background-color: var(--accent-color);  
   position: absolute;
   bottom: 60px;
   top: 60px;
@@ -844,6 +818,7 @@ section,
   right: 0;
   transform: skewY(-3deg);
 }
+
 
 .section-bg .container {
   position: relative;
@@ -1066,9 +1041,11 @@ section,
 
 .about .icon-box i {
   font-size: 40px;
-  color: var(--accent-color);
+  /* color: var(--background-color); */
+   color: #f7f7f7;
   margin-bottom: 10px;
 }
+
 
 .about .icon-box h4 {
   font-size: 20px;
@@ -1227,43 +1204,66 @@ section,
 
 .tabs .tab-pane p:last-child {
   margin-bottom: 0;
-}
+} 
+/* ======= service  ======= */
 
-/*--------------------------------------------------------------
-# Services Section
---------------------------------------------------------------*/
-.services .service-item {
+ .services .service-item {
   background-color: var(--surface-color);
   padding: 30px;
-  transition: 0.3s;
+  /* border-radius: 6px; */
+  height: auto;
 }
 
-.services .service-item .icon {
-  font-size: 36px;
-  line-height: 0;
-  margin-right: 30px;
-  color: var(--accent-color);
+/* Header */
+.service-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.services .service-item .title {
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 20px;
+/* Left side */
+.service-header .left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
-.services .service-item .title a {
-  color: var(--heading-color);
+.service-icon {
+  font-size: 32px;
+  color: var(--accent-secondary);
 }
 
-.services .service-item .description {
-  line-height: 24px;
-  font-size: 14px;
+.title {
   margin: 0;
+  font-size: 20px;
+  font-weight: 700;
 }
 
-.services .service-item:hover {
-  background-color: color-mix(in srgb, var(--surface-color) 90%, white 5%);
+/* Toggle icon */
+.toggle-icon {
+  font-size: 22px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+   color:#f7f7f7 !important; 
 }
+
+/* Description */
+.description {
+  margin-top: 15px;
+  font-size: 14px;
+  line-height: 24px;
+  display: none;
+}
+
+/* Active states */
+.description.open {
+  display: block;
+}
+
+.toggle-icon.open {
+  transform: rotate(90deg);
+}
+
 
 /*--------------------------------------------------------------
 # Portfolio Section
