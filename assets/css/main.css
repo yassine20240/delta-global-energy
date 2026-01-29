@@ -683,7 +683,7 @@ gap:1rem;
   background: var(--accent-color);
   color: var(--contrast-color);
   transition: 0.3s;
-  border-radius: 0 4px 4px 0;
+  /* border-radius: 0 4px 4px 0; */
 }
 
 .footer .footer-newsletter .newsletter-form input[type=submit]:hover {
@@ -718,7 +718,7 @@ gap:1rem;
   background-color: var(--accent-color);
   width: 40px;
   height: 40px;
-  border-radius: 4px;
+  /* border-radius: 4px; */
   transition: all 0.4s;
 }
 
@@ -845,6 +845,7 @@ section,
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 20px;
+  margin-top: 20px;
   padding-bottom: 20px;
   position: relative;
   text-transform: uppercase;
@@ -867,6 +868,40 @@ section,
   margin-bottom: 0;
 }
 
+
+
+.section-title1 {
+  text-align: center;
+  padding-bottom: 0px !important;
+  position: relative;
+}
+
+.section-title1 #aboutus {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-top: 100px;
+  padding-bottom: 20px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.section-title1 #aboutus:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--accent-color);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -1230,7 +1265,7 @@ section,
 
 .service-icon {
   font-size: 32px;
-  color: var(--accent-secondary);
+  color: var(--contrast-color);
 }
 
 .title {
@@ -1758,7 +1793,7 @@ section,
 --------------------------------------------------------------*/
 .contact .info-item {
   background-color: var(--surface-color);
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.219);
   padding: 24px 0 30px 0;
 }
 
@@ -1793,7 +1828,7 @@ section,
 
 .contact .php-email-form {
   background-color: var(--surface-color);
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.219);
   height: 100%;
   padding: 30px;
 }
