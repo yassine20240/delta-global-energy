@@ -12,7 +12,7 @@
    Global Colors (Brand Identity)
 ================================ */
 :root {
-  --background-color: #ffffff;        /* Main background */
+  --background-color: #eaf4fb;        /* Main background */
   --default-color: #475569;           /* Body text */
    /* --heading-color: #0f172a;          */
   /* --accent-color: #0b3c5d;           */
@@ -790,7 +790,8 @@ gap:1rem;
 section,
 .section {
   color: var(--default-color);
-  background-color: var(--background-color);
+background-color: var(--background-color);
+
   padding: 60px 0;
   scroll-margin-top: 100px;
   overflow: clip;
