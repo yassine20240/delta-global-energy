@@ -12,7 +12,7 @@
    Global Colors (Brand Identity)
 ================================ */
 :root {
-  --background-color: #eaf4fb;        /* Main background */
+  --background-color: #b7def4;        /* Main background */
   --default-color: #475569;           /* Body text */
    /* --heading-color: #0f172a;          */
   /* --accent-color: #0b3c5d;           */
@@ -37,7 +37,10 @@
    Navigation Menu Colors
 ================================ */
 :root {
-  --nav-color: #0f172a;                /* Menu links */
+
+  --nav-color: #b7def4;                /* Menu links */
+  
+  /* --nav-color: #0f172a;              */
   --nav-hover-color: #0ea5a4;          /* Hover / Active */
   --nav-mobile-background-color: #ffffff;
   --nav-dropdown-background-color: #ffffff;
@@ -211,13 +214,20 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  color: var(--default-color);
-  background-color: var(--default-color);
+  
+  /* color: var( --nav-dropdown-color)   ; */
+  background-color: var( --background-color);
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
   /* ===================== */
   height: 15vh;
+}
+.navmenu ul li a {
+color:var(--accent-color) !important ; 
+}
+.navmenu ul li a:hover {
+color:#0a3a5ec4 !important ; 
 }
 @media (max-width: 768px) {
 .header {
